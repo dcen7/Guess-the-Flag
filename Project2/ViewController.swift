@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+    
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
@@ -59,18 +60,32 @@ class ViewController: UIViewController {
         
         title! += " score: \(score)"
         
+        let ac: UIAlertController!
+        
         if questionNumber == 10 {
 
-            let ac = UIAlertController(title: titleAlert, message: "Your final score is \(score).", preferredStyle: .alert)
+            ac = UIAlertController(title: titleAlert, message: "Your final score is \(score).", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-            present(ac, animated: true)
+           
         } else {
 
-            let ac = UIAlertController(title: titleAlert, message: "Your score is \(score).", preferredStyle: .alert)
+            ac = UIAlertController(title: titleAlert, message: "Your score is \(score).", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-            present(ac, animated: true)
+            
         }
+         present(ac, animated: true)
         
     }
+    
+    
+    @IBAction func scoreBarButton(_ sender: UIBarButtonItem) {
+        
+        let ac = UIAlertController(title: "Result", message: "Your score is \(score).", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        present(ac, animated: true)
+        
+        
+    }
+    
 }
 
