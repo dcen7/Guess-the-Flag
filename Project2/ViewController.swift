@@ -32,10 +32,12 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
-        askQuestion(action: nil)
+        askQuestion()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedTapped))
     }
     
-    func askQuestion(action: UIAlertAction!){
+    func askQuestion(action: UIAlertAction! = nil){
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
@@ -47,15 +49,16 @@ class ViewController: UIViewController {
  
     @IBAction func buttonTapped(_ sender: UIButton) {
         var titleAlert: String
+        questionNumber += 1
         
         if sender.tag == correctAnswer {
             titleAlert = "Correct"
             score += 1
-            questionNumber += 1
+            
         }else{
             titleAlert = "Wrong that is the flag of \(countries[sender.tag].uppercased())"
             score -= 1
-            questionNumber += 1
+            
         }
         
         title! += " score: \(score)"
@@ -85,6 +88,13 @@ class ViewController: UIViewController {
         present(ac, animated: true)
         
         
+    }
+    
+    @objc func sharedTapped(){
+        let message = "Your score is \(score)"
+        let vc = UIActivityViewController(activityItems: [message], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
 }
