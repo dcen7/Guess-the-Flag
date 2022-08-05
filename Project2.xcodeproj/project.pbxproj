@@ -13,6 +13,8 @@
 		FB54E7AB243CAC7000DE1864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54E7A9243CAC7000DE1864 /* Main.storyboard */; };
 		FB54E7AD243CAC7300DE1864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB54E7AC243CAC7300DE1864 /* Assets.xcassets */; };
 		FB54E7B0243CAC7300DE1864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB54E7AE243CAC7300DE1864 /* LaunchScreen.storyboard */; };
+		FBA902E9289D4E5700E51610 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FBA902E8289D4E5700E51610 /* README.md */; };
+		FBA902EC289D4F0200E51610 /* Simulator.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA902EB289D4F0200E51610 /* Simulator.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FB54E7AC243CAC7300DE1864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB54E7AF243CAC7300DE1864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB54E7B1243CAC7300DE1864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBA902E8289D4E5700E51610 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FBA902EB289D4F0200E51610 /* Simulator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Simulator.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		FB54E7A2243CAC7000DE1864 /* Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				FBA902EA289D4E8500E51610 /* images */,
 				FB54E7A3243CAC7000DE1864 /* AppDelegate.swift */,
 				FB54E7A5243CAC7000DE1864 /* SceneDelegate.swift */,
 				FB54E7A7243CAC7000DE1864 /* ViewController.swift */,
@@ -63,8 +68,17 @@
 				FB54E7AC243CAC7300DE1864 /* Assets.xcassets */,
 				FB54E7AE243CAC7300DE1864 /* LaunchScreen.storyboard */,
 				FB54E7B1243CAC7300DE1864 /* Info.plist */,
+				FBA902E8289D4E5700E51610 /* README.md */,
 			);
 			path = Project2;
+			sourceTree = "<group>";
+		};
+		FBA902EA289D4E8500E51610 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FBA902EB289D4F0200E51610 /* Simulator.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,8 @@
 			files = (
 				FB54E7B0243CAC7300DE1864 /* LaunchScreen.storyboard in Resources */,
 				FB54E7AD243CAC7300DE1864 /* Assets.xcassets in Resources */,
+				FBA902EC289D4F0200E51610 /* Simulator.png in Resources */,
+				FBA902E9289D4E5700E51610 /* README.md in Resources */,
 				FB54E7AB243CAC7000DE1864 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
